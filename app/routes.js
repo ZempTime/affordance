@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
-import Layout from './components/layout';
-import AboutPage from './components/aboutPage';
+import Layout from './components/Layout';
+import AboutPage from './components/AboutPage';
 
 const routes = (
   <Route path="/" component={Layout}>

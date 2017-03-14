@@ -1,0 +1,11 @@
+{
+  "name": "affordance",
+  "version": "1.0.0",
+  "description": "Get a grip on your codebase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Zempel",
+  "license": "ISC"
+}

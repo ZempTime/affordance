@@ -29,6 +29,9 @@ module.exports = {
       sourcemap: false,
       beautify: false,
       dead_code: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      debug: true
     })
   ]
 };

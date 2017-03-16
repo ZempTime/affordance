@@ -9,13 +9,13 @@ class ToolBar extends Component {
     toggleLayerSelectionExpanded: React.PropTypes.func
   }
   render() {
-    let { layerSelectionExpanded, layers } = this.props;
+    let { layerSelectionExpanded, layers, toggleLayerSelectionExpanded } = this.props;
     return(
       <div className="toolBar">
         <LayerSelector
           layers={ layers }
           layerSelectionExpanded={ layerSelectionExpanded }
-          toggleLayerSelectionExpanded={ this.props.toggleLayerSelectionExpanded } />
+          toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded } />
         <p>either canvas edit options, or layer selection</p>
       </div>
     );

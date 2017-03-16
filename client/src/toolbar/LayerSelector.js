@@ -8,13 +8,13 @@ class LayerSelector extends Component {
     return layers[activeLayerIndex].name;
   }
   render() {
-    let { layerSelectionExpanded, layers } = this.props;
+    let { layerSelectionExpanded, layers, toggleLayerSelectionExpanded } = this.props;
 
     return(
       <LayerSelectionPrompt
         layerSelectionExpanded={ layerSelectionExpanded }
         activeLayerName={ this.activeLayerName() }
-        onClick={ this.props.toggleLayerSelectionExpanded } />
+        toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded } />
     );
   }
 }

@@ -10,14 +10,15 @@ class Layout extends Component {
     this.state = renderData;
     this.toggleLayerSelectionExpanded = this.toggleLayerSelectionExpanded.bind(this);
   }
-  toggleLayerSelectionExpanded() {
+  toggleLayerSelectionExpanded(e) {
     console.log("clicked");
+    e.preventDefault();
     let { layerSelectionExpanded } = this.state;
     layerSelectionExpanded = !layerSelectionExpanded;
     this.setState({ layerSelectionExpanded });
   }
   render() {
-    const { layerSelectionExpanded, layers, toggleLayerSelectionExpanded } = this.state;
+    const { layerSelectionExpanded, layers } = this.state;
     return(
       <div className="container">
         <header className="header">
@@ -29,7 +30,7 @@ class Layout extends Component {
           <ToolBar
             layerSelectionExpanded={ layerSelectionExpanded }
             layers={ layers }
-            toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded } />
+            toggleLayerSelectionExpanded={ this.toggleLayerSelectionExpanded } />
         </div>
       </div>
     );

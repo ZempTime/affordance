@@ -7,8 +7,17 @@ class Layout extends Component {
   constructor() {
     super()
     this.state = renderData;
+    console.log(this.state);
+    this.toggleLayerSelectionExpanded = this.toggleLayerSelectionExpanded.bind(this);
+  }
+  toggleLayerSelectionExpanded() {
+    console.log("clicked");
+    let { layerSelectionExpanded } = this.state;
+    layerSelectionExpanded = !layerSelectionExpanded;
+    this.setState({ layerSelectionExpanded });
   }
   render() {
+    const { layerSelectionActive, layers } = this.state;
     return(
       <div className="container">
         <header className="header">
@@ -16,7 +25,10 @@ class Layout extends Component {
         </header>
 
         <div className="content">
-          <LayerPrompt />
+          <LayerPrompt
+            layerSelectionActive={ layerSelectionActive }
+            layers={ layers }
+            toggleLayerSelectionExpanded={ this.toggleLayerSelectionExpanded } />
           <p>The real content (child components) will go here.</p>
         </div>
 

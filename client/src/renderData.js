@@ -1,12 +1,11 @@
 const renderData = {
-  layout: {
-    activeLayer: "Layer1",
-  },
+  activeLayer: "Layer1",
+  layerSelectionExpanded: false,
   layers: [
     {
       type: "Layer",
       name: "Layer1",
-      position: "1",
+      active: true,
       content: {
         shape: "square"
       }
@@ -14,10 +13,12 @@ const renderData = {
     {
       type: "Layer",
       name: "Layer2",
-      position: "2",
+      active: false,
       content: {
         shape: "circle"
       }
     }
   ]
 };
+
+export default renderData;

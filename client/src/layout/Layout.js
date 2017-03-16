@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Layout.css';
+import Shape from '../shape/Shape';
 
 class Layout extends Component {
   render() {
@@ -11,6 +12,7 @@ class Layout extends Component {
 
         <div className="content">
           <p>The real content (child components) will go here.</p>
+          <Shape />
         </div>
 
         <footer className="footer">

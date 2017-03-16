@@ -1,0 +1,6 @@
+.canvas {
+  background-color: white;
+  min-height: 100vh;
+  flex: 1 0 74vw;
+  overflow: visible;
+}

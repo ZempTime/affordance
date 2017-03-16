@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Layout.css';
 import renderData from '../renderData';
-import LayerPrompt from '../layer/LayerPrompt';
+import ToolBar from '../toolbar/ToolBar';
+import Canvas from '../canvas/Canvas';
 
 class Layout extends Component {
   constructor() {
     super()
     this.state = renderData;
-    console.log(this.state);
     this.toggleLayerSelectionExpanded = this.toggleLayerSelectionExpanded.bind(this);
   }
   toggleLayerSelectionExpanded() {
@@ -25,16 +25,9 @@ class Layout extends Component {
         </header>
 
         <div className="content">
-          <LayerPrompt
-            layerSelectionActive={ layerSelectionActive }
-            layers={ layers }
-            toggleLayerSelectionExpanded={ this.toggleLayerSelectionExpanded } />
-          <p>The real content (child components) will go here.</p>
+          <Canvas />
+          <ToolBar />
         </div>
-
-        <footer className="footer">
-          <p>Footer</p>
-        </footer>
       </div>
     );
   }

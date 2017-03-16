@@ -1,0 +1,8 @@
+.toolBar {
+  height: 100vh - 50px;
+  flex: 1 0 24vw;
+  overflow: visible;
+
+  display: flex;
+  flex-flow: column wrap;
+}

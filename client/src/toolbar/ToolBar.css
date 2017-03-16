@@ -1,8 +1,21 @@
 .toolBar {
-  height: 100vh - 50px;
-  flex: 1 0 24vw;
+  height: 100vh;
+  flex: 0 0 23vw;
   overflow: visible;
 
   display: flex;
   flex-flow: column wrap;
+  align-items: stretch;
+}
+
+.toolBar__layerSelectionPrompt {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.toolBar__layerSelectionPrompt:hover {
+  background-color: #ceffff
 }

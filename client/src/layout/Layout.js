@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './Layout.css';
-import Shape from '../shape/Shape';
+import renderData from '../renderData';
+import LayerPrompt from '../layer/LayerPrompt';
 
 class Layout extends Component {
+  constructor() {
+    super()
+    this.state = renderData;
+  }
   render() {
     return(
       <div className="container">
@@ -11,8 +16,8 @@ class Layout extends Component {
         </header>
 
         <div className="content">
+          <LayerPrompt />
           <p>The real content (child components) will go here.</p>
-          <Shape />
         </div>
 
         <footer className="footer">

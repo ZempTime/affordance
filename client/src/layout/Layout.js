@@ -17,7 +17,7 @@ class Layout extends Component {
     this.setState({ layerSelectionExpanded });
   }
   render() {
-    const { layerSelectionActive, layers } = this.state;
+    const { layerSelectionExpanded, layers, toggleLayerSelectionExpanded } = this.state;
     return(
       <div className="container">
         <header className="header">
@@ -26,7 +26,10 @@ class Layout extends Component {
 
         <div className="content">
           <Canvas />
-          <ToolBar />
+          <ToolBar
+            layerSelectionExpanded={ layerSelectionExpanded }
+            layers={ layers }
+            toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded } />
         </div>
       </div>
     );

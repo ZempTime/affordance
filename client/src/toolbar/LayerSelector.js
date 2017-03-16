@@ -1,0 +1,22 @@
+import React, { Component } from 'react';
+import LayerSelectionPrompt from './LayerSelectionPrompt';
+
+class LayerSelector extends Component {
+  activeLayerName() {
+    let { layers } = this.props;
+    let activeLayerIndex = layers.findIndex(layer => layer.active);
+    return layers[activeLayerIndex].name;
+  }
+  render() {
+    let { layerSelectionExpanded, layers } = this.props;
+
+    return(
+      <LayerSelectionPrompt
+        layerSelectionExpanded={ layerSelectionExpanded }
+        activeLayerName={ this.activeLayerName() }
+        onClick={ this.props.toggleLayerSelectionExpanded } />
+    );
+  }
+}
+
+export default LayerSelector;

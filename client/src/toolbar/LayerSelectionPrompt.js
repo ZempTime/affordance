@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 
 class LayerSelectionPrompt extends Component {
-  activeLayerName() {
-    let { layers } = this.props;
-    let activeLayerIndex = layers.findIndex(layer => layer.active);
-    return layers[activeLayerIndex].name;
-  }
   render() {
-    return(
+    let { activeLayerName, layerSelectionExpanded } = this.props;
+
+    return layerSelectionExpanded ? (
       <div className="toolBar__layerSelectionPrompt">
-        ActiveLayerName
-        <i className="fa fa-chevron-down" />
+        { activeLayerName } <i className="fa fa-chevron-down"></i>
+      </div>
+    ) : (
+      <div className="toolBar__layerSelectionPrompt">
+        { activeLayerName } <i className="fa fa-chevron-left"></i>
       </div>
     );
   }
 }
 
 export default LayerSelectionPrompt;
-

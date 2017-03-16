@@ -12,10 +12,18 @@
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #c3c3c3;
   cursor: pointer;
   transition: all .3s ease;
 }
+
 .toolBar__layerSelectionPrompt:hover {
   background-color: #ceffff
+}
+
+.toolBar__layerSelectionPrompt i {
+  margin-right: 7px;
+  margin-top: 2px;
+  float: right;
 }

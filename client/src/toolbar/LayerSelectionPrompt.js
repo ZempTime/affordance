@@ -7,7 +7,9 @@ class LayerSelectionPrompt extends Component {
 
     return (
       <div className="toolBar__layerSelectionPrompt" onClick={toggleLayerSelectionExpanded}>
-        { activeLayerName } <i className={icon}></i>
+        <p>
+          Current: { activeLayerName } <i className={icon}></i>
+        </p>
       </div>
     );
   }

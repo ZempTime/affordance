@@ -3,9 +3,13 @@ import './Canvas.css';
 
 class Canvas extends Component {
   render() {
+    let { layer } = this.props;
+    console.log(layer);
     return(
       <div className="canvas">
-        <p>Canvas</p>
+      <p>
+        { layer[0].content }
+      </p>
       </div>
     );
   }

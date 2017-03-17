@@ -3,20 +3,16 @@ const renderData = {
   layerSelectionExpanded: false,
   layers: [
     {
-      type: "Layer",
+      layerIndex: 1,
       name: "Layer1",
       active: true,
-      content: {
-        shape: "square"
-      }
+      content: "hah"
     },
     {
-      type: "Layer",
+      layerIndex: 2,
       name: "Layer2",
       active: false,
-      content: {
-        shape: "circle"
-      }
+      content: "ook"
     }
   ]
 };

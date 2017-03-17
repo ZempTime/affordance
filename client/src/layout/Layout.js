@@ -9,16 +9,27 @@ class Layout extends Component {
     super()
     this.state = renderData;
     this.toggleLayerSelectionExpanded = this.toggleLayerSelectionExpanded.bind(this);
+    this.selectLayer = this.selectLayer.bind(this);
   }
   toggleLayerSelectionExpanded(e) {
-    console.log("clicked");
-    e.preventDefault();
     let { layerSelectionExpanded } = this.state;
     layerSelectionExpanded = !layerSelectionExpanded;
     this.setState({ layerSelectionExpanded });
   }
+  selectLayer(layerIndex) {
+    let { layers } = this.state;
+    layers.forEach((layer) => {
+      if (layer.layerIndex === layerIndex) {
+        layer.active = true;
+      } else {
+        layer.active = false;
+      }
+    })
+    this.setState({ layers })
+  }
   render() {
     const { layerSelectionExpanded, layers } = this.state;
+    const activeLayer = layers.filter((layer) => layer.active);
     return(
       <div className="container">
         <header className="header">
@@ -26,10 +37,11 @@ class Layout extends Component {
         </header>
 
         <div className="content">
-          <Canvas />
+          <Canvas layer={ activeLayer } />
           <ToolBar
             layerSelectionExpanded={ layerSelectionExpanded }
             layers={ layers }
+            selectLayer = { this.selectLayer }
             toggleLayerSelectionExpanded={ this.toggleLayerSelectionExpanded } />
         </div>
       </div>

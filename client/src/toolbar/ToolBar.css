@@ -16,6 +16,7 @@
   border-left: 1px solid #c3c3c3;
   cursor: pointer;
   transition: all .3s ease;
+  background-color: #b3b3b3;
 }
 
 .toolBar__layerSelectionPrompt:hover {
@@ -27,3 +28,22 @@
   margin-top: 2px;
   float: right;
 }
+
+.toolBar__layerSelectionOption {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #c3c3c3;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.toolBar__layerSelectionOption.active {
+  font-weight: 700;
+}
+
+.toolBar__layerSelectionOption:hover {
+  background-color: #ceffff
+}
+

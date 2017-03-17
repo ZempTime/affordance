@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LayerSelectionPrompt from './LayerSelectionPrompt';
+import LayerSelectionOption from './LayerSelectionOption';
 
 class LayerSelector extends Component {
   activeLayerName() {
@@ -8,13 +9,23 @@ class LayerSelector extends Component {
     return layers[activeLayerIndex].name;
   }
   render() {
-    let { layerSelectionExpanded, layers, toggleLayerSelectionExpanded } = this.props;
-
+    let { layerSelectionExpanded, layers, selectLayer, toggleLayerSelectionExpanded } = this.props;
+    let layerSelectionOptions = layers.map((layer, i) => {
+        return(
+          <LayerSelectionOption key={i} layer={layer} selectLayer={selectLayer} />
+        )
+    })
     return(
-      <LayerSelectionPrompt
-        layerSelectionExpanded={ layerSelectionExpanded }
-        activeLayerName={ this.activeLayerName() }
-        toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded } />
+      <div className="toolBar__layerSelector">
+        <LayerSelectionPrompt
+          layerSelectionExpanded={ layerSelectionExpanded }
+          activeLayerName={ this.activeLayerName() }
+          toggleLayerSelectionExpanded={ toggleLayerSelectionExpanded }>
+        </LayerSelectionPrompt>
+
+        { layerSelectionExpanded && layerSelectionOptions }
+      </div>
+
     );
   }
 }

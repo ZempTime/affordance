@@ -47,3 +47,24 @@
   background-color: #ceffff
 }
 
+.toolBar__createLayerOption {
+  text-align: center;
+}
+
+.toolBar__layerForm {
+  width: 100%;
+}
+
+.toolBar__layerForm label {
+  width: 100%;
+}
+
+.toolBar__layerForm input {
+  margin: 10px;
+  width: 100%;
+}
+
+.toolBar__layerForm p {
+  text-align: center;
+  cursor: pointer;
+}

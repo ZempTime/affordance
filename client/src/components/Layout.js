@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Layout.css';
+import '../styles/Layout.css';
 import renderData from '../renderData';
-import ToolBar from '../toolbar/ToolBar';
-import Canvas from '../canvas/Canvas';
+import ToolBar from './ToolBar';
+import Canvas from './Canvas';
 
 class Layout extends Component {
   constructor() {

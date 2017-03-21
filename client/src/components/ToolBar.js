@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ToolBar.css';
+import '../styles/ToolBar.css';
 import LayerSelector from './LayerSelector';
 
 class ToolBar extends Component {

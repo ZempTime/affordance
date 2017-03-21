@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/Shape.css';
 
 class Shape extends Component {
   render() {

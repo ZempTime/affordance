@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './components/Layout';
+import App from './containers/App';
 import 'font-awesome/css/font-awesome.css';
-import './styles/index.css';
+import './styles/main.css';
 
-ReactDOM.render(
-  <Layout />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));

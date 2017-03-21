@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/Layout.css';
 import renderData from '../renderData';
 import ToolBar from './ToolBar';
 import Canvas from './Canvas';
@@ -53,9 +52,6 @@ class Layout extends Component {
     const activeLayer = layers.filter((layer) => layer.active);
     return(
       <div className="container">
-        <header className="header">
-          <p>Header</p>
-        </header>
 
         <div className="content">
           <Canvas layer={ activeLayer } />

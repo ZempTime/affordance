@@ -1,7 +1,8 @@
 const renderData = {
-  activeLayer: "Layer1",
-  layerSelectionExpanded: false,
-  layerCreatorExpanded: false,
+  editor: {
+    layerSelectionExpanded: false,
+    layerCreatorExpanded: false,
+  },
   layers: [
     {
       layerIndex: 1,

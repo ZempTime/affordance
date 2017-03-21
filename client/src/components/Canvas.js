@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-import '../styles/Canvas.css';
+import React from 'react';
 
-class Canvas extends Component {
-  render() {
-    let { layer } = this.props;
-    return(
-      <div className="canvas">
-      </div>
-    );
-  }
+const Canvas = (props) => {
+  return(
+    <div>{props.content}</div>
+  );
 }
 
 export default Canvas;

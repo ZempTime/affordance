@@ -1,12 +1,15 @@
 import React from 'react';
 import Canvas from './Canvas';
-import ToolBar from './ToolBar';
 
 const Editor = (props) => {
+
+  let activeLayer = props.layers.find(layer => layer.active === true );
+  console.log(activeLayer);
+
   return (
     <div className="container">
       <div className="content">
-        <Canvas />
+        <Canvas layer={activeLayer} />
       </div>
     </div>
   );

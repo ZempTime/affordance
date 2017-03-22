@@ -5,7 +5,7 @@ import EditorContainer from './EditorContainer';
 class App extends Component {
   render() {
     return(
-      <div className="container">
+      <div className="content">
         <NavContainer />
         <EditorContainer />
       </div>

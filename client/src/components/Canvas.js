@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Canvas = (props) => {
-  return(
-    <div>{props.content}</div>
-  );
+  return props.layer? (
+    <div>{props.layer.content}</div>
+  ) : (
+    <div>Create your first layer</div>
+  )
 }
 
 export default Canvas;
